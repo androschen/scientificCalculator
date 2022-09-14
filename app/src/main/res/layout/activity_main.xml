@@ -23,24 +23,6 @@
         android:padding="10dp"
         android:orientation="horizontal">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="8"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="7"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="7"
-            android:layout_height="match_parent"/>
-
         <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -53,11 +35,43 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_weight="1"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="8"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="9"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="<-"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="1"/>
+
     </LinearLayout>
-
-
-
-
 
 
 </LinearLayout>
