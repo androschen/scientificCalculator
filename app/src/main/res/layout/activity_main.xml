@@ -62,7 +62,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="<-"
+            android:text="Delete"
             app:cornerRadius="0dp"
             android:backgroundTint="@color/grey"
             android:textColor="@color/white"
