@@ -8,11 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number" />
 
     <EditText
+        android:id="@+id/finalCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number" />
@@ -24,6 +26,8 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button7Pressed"
+            android:id="@+id/button7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="7"
@@ -36,6 +40,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button8Pressed"
+            android:id="@+id/button8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="8"
@@ -48,6 +54,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button9Pressed"
+            android:id="@+id/button9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="9"
@@ -60,6 +68,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonDeletePressed"
+            android:id="@+id/buttonDelete"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Delete"
@@ -80,6 +90,8 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button4Pressed"
+            android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="4"
@@ -92,6 +104,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button5Pressed"
+            android:id="@+id/button5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="5"
@@ -104,6 +118,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button6Pressed"
+            android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="6"
@@ -116,6 +132,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonClearPressed"
+            android:id="@+id/buttonClear"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="C"
@@ -136,6 +154,8 @@
     android:orientation="horizontal">
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="button1Pressed"
+        android:id="@+id/button1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="1"
@@ -148,6 +168,8 @@
         android:layout_weight="1"/>
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="button2Pressed"
+        android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="2"
@@ -160,6 +182,8 @@
         android:layout_weight="1"/>
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="button3Pressed"
+        android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="3"
@@ -172,6 +196,8 @@
         android:layout_weight="1"/>
 
     <com.google.android.material.button.MaterialButton
+        android:onClick="buttonAddPressed"
+        android:id="@+id/buttonAdd"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:text="+"
@@ -192,6 +218,8 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonMultiplePressed"
+            android:id="@+id/buttonMultiple"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="x"
@@ -204,6 +232,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="button0Pressed"
+            android:id="@+id/button0"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="0"
@@ -216,6 +246,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonDivisionPressed"
+            android:id="@+id/buttonDivision"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="/"
@@ -228,6 +260,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonSubPressed"
+            android:id="@+id/buttonSub"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="-"
@@ -248,6 +282,8 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonAbsPressed"
+            android:id="@+id/buttonAbs"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="|x|"
@@ -260,6 +296,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonFactPressed"
+            android:id="@+id/buttonFact"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="X!"
@@ -272,6 +310,8 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonLogPressed"
+            android:id="@+id/buttonLog"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="log"
@@ -284,9 +324,33 @@
             android:layout_weight="1"/>
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="buttonModPressed"
+            android:id="@+id/buttonMod"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Mod"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="buttonCountPressed"
+            android:id="@+id/buttonCount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Count"
             app:cornerRadius="0dp"
             android:backgroundTint="@color/grey"
             android:textColor="@color/white"
