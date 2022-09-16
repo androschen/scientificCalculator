@@ -31,9 +31,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button8Pressed(View view) {
+        input += "8";
+        finalCount.setText(input);
     }
 
     public void button9Pressed(View view) {
+        input += "9";
+        finalCount.setText(input);
     }
 
     public void buttonDeletePressed(View view) {
@@ -42,24 +46,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button4Pressed(View view) {
+        input += "4";
+        finalCount.setText(input);
     }
 
     public void button5Pressed(View view) {
+        input += "5";
+        finalCount.setText(input);
     }
 
     public void button6Pressed(View view) {
+        input += "6";
+        finalCount.setText(input);
     }
 
     public void buttonClearPressed(View view) {
     }
 
     public void button1Pressed(View view) {
+        input += "1";
+        finalCount.setText(input);
     }
 
     public void button2Pressed(View view) {
+        input += "2";
+        finalCount.setText(input);
     }
 
     public void button3Pressed(View view) {
+        input += "3";
+        finalCount.setText(input);
     }
 
     public void buttonAddPressed(View view) {
@@ -69,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void button0Pressed(View view) {
+        input += "0";
+        finalCount.setText(input);
     }
 
     public void buttonDivisionPressed(View view) {
