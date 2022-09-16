@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         history = findViewById(R.id.history);
         finalCount = findViewById(R.id.finalCount);
+
+
     }
 
     public void button7Pressed(View view) {
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonDeletePressed(View view) {
+        input=input.substring(0,input.length()-1);
+        finalCount.setText(input);
     }
 
     public void button4Pressed(View view) {
