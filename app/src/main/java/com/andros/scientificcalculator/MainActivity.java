@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonDeletePressed(View view) {
-        if(op.empty()){
+        if(!opPressed){
             input=input.substring(0,input.length()-1);
             currentNumber =input;
         }
