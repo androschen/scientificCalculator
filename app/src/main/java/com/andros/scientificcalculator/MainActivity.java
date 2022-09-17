@@ -93,11 +93,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonDeletePressed(View view) {
-        if(!opPressed){
-            input=input.substring(0,input.length()-1);
-            currentNumber =input;
+        if(input.length()>0){
+            if(!opPressed){
+                input=input.substring(0,input.length()-1);
+                currentNumber =input;
+            }
+            finalCount.setText(input);
         }
-        finalCount.setText(input);
     }
 
     public void buttonClearPressed(View view) {
@@ -174,6 +176,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonFactPressed(View view) {
+        String num = currentNumber;
+        currentNumber = "";
+        int temp = Integer.parseInt(num);
+
+        CalculateFactorial calculateFactorial = new CalculateFactorial();
+        int []fact= calculateFactorial.factorial(temp);
+
+        String numFact="";
+        for(int i=calculateFactorial.getSize()-1;i>=0;i--){
+            numFact+=fact[i];
+        }
+        finalCount.setText(numFact);
     }
 
     public void buttonLogPressed(View view) {
