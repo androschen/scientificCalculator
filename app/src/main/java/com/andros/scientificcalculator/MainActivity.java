@@ -116,7 +116,11 @@ public class MainActivity extends AppCompatActivity {
 
     void buttonOpPressed(Character currentOp){
         opPressed = true;
-        historyText += "" + currentNumber + currentOp;
+        if(op.empty()){
+            historyText = "";
+        }
+        System.out.println("currNumnya : " + currentNumber);
+        historyText += "" + currentNumber + (currentOp == '%' ? " MOD " : currentOp);
         finalCount.setText("");
         history.setText(historyText);
         if(op.empty()){
@@ -135,14 +139,21 @@ public class MainActivity extends AppCompatActivity {
                 temp = number.peek() * Integer.parseInt(currentNumber);
             }else if(ops=='-'){
                 temp = number.peek() - Integer.parseInt(currentNumber);
+            }else if(ops=='%'){
+                temp = number.peek() % Integer.parseInt(currentNumber);
             }
             input = String.valueOf(temp);
             finalCount.setText(input);
             number.pop();
             number.push(temp);
-            op.pop();
-            op.push(currentOp);
+            if(!op.empty()) op.pop();
             currentNumber ="";
+            if(currentOp != '='){
+                op.push(currentOp);
+            }else{
+                opPressed = false;
+                currentNumber = input;
+            }
             System.out.println(temp);
         }
     }
@@ -169,6 +180,10 @@ public class MainActivity extends AppCompatActivity {
         checkOpValid('=');
     }
 
+    public void buttonModPressed(View view) {
+        checkOpValid('%');
+    }
+
     public void buttonDivisionPressed(View view) {
     }
 
@@ -193,6 +208,4 @@ public class MainActivity extends AppCompatActivity {
     public void buttonLogPressed(View view) {
     }
 
-    public void buttonModPressed(View view) {
-    }
 }
