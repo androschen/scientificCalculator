@@ -27,40 +27,69 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         history = findViewById(R.id.history);
         finalCount = findViewById(R.id.finalCount);
+    }
 
+    void isOpPressed(){
+        if(opPressed) {
+            input = "";
+            opPressed = false;
+        }
+    }
 
+    void numberPressed(Character number){
+        input += number;
+        currentNumber += number;
+        finalCount.setText(input);
+    }
 
+    public void button0Pressed(View view) {
+        isOpPressed();
+        numberPressed('0');
+    }
 
+    public void button1Pressed(View view) {
+        isOpPressed();
+        numberPressed('1');
+    }
+
+    public void button2Pressed(View view) {
+        isOpPressed();
+        numberPressed('2');
+    }
+
+    public void button3Pressed(View view) {
+        isOpPressed();
+        numberPressed('3');
+    }
+
+    public void button4Pressed(View view) {
+        isOpPressed();
+        numberPressed('4');
+    }
+
+    public void button5Pressed(View view) {
+        isOpPressed();
+        numberPressed('5');
+    }
+
+    public void button6Pressed(View view) {
+        isOpPressed();
+        numberPressed('6');
     }
 
     public void button7Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "7";
-        currentNumber += "7";
-        finalCount.setText(input);
+        isOpPressed();
+        numberPressed('7');
     }
 
     public void button8Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "8";
-        currentNumber += "8";
-        finalCount.setText(input);
+        isOpPressed();
+        numberPressed('8');
     }
 
     public void button9Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "9";
-        currentNumber += "9";
-        finalCount.setText(input);
+        isOpPressed();
+        numberPressed('9');
     }
 
     public void buttonDeletePressed(View view) {
@@ -68,41 +97,11 @@ public class MainActivity extends AppCompatActivity {
             input=input.substring(0,input.length()-1);
             currentNumber =input;
         }
-
-        finalCount.setText(input);
-    }
-
-    public void button4Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "4";
-        currentNumber += "4";
-        finalCount.setText(input);
-    }
-
-    public void button5Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "5";
-        currentNumber += "5";
-        finalCount.setText(input);
-    }
-
-    public void button6Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "6";
-        currentNumber += "6";
         finalCount.setText(input);
     }
 
     public void buttonClearPressed(View view) {
+        //clear all, go to history (fragment)
         historyText = "";
         history.setText("");
         finalCount.setText("");
@@ -111,36 +110,6 @@ public class MainActivity extends AppCompatActivity {
         opPressed = false;
         op.clear();
         number.clear();
-    }
-
-    public void button1Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "1";
-        currentNumber += "1";
-        finalCount.setText(input);
-    }
-
-    public void button2Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "2";
-        currentNumber += "2";
-        finalCount.setText(input);
-    }
-
-    public void button3Pressed(View view) {
-        if(opPressed) {
-            input = "";
-            opPressed = false;
-        }
-        input += "3";
-        currentNumber += "3";
-        finalCount.setText(input);
     }
 
     void buttonOpPressed(Character currentOp){
@@ -157,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             Character ops = op.peek();
             Integer temp = 0;
+            System.out.println("peek : " + number.peek() + ", currentNumber : " + currentNumber);
             if(ops=='+'){
                 temp = number.peek() + Integer.parseInt(currentNumber);
             }else if(ops=='x') {
@@ -175,22 +145,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    void  checkOpValid(Character op){
+        if(!opPressed){
+            buttonOpPressed(op);
+        }
+    }
+
     public void buttonAddPressed(View view) {
-        buttonOpPressed('+');
+        checkOpValid('+');
     }
 
     public void buttonMultiplePressed(View view) {
-        buttonOpPressed('x');
+        checkOpValid('x');
     }
 
     public void buttonSubPressed(View view) {
-        buttonOpPressed('-');
+        checkOpValid('-');
     }
 
-    public void button0Pressed(View view) {
-        input += "0";
-        currentNumber += "0";
-        finalCount.setText(input);
+    public void buttonCountPressed(View view) {
+        checkOpValid('=');
     }
 
     public void buttonDivisionPressed(View view) {
@@ -206,9 +180,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonModPressed(View view) {
-    }
-
-    public void buttonCountPressed(View view) {
-        buttonOpPressed('=');
     }
 }
